@@ -34,7 +34,7 @@ composer require outl1ne/nova-color-field
 ### General
 
 ```php
-use Outl1ne\NovaColorField\Color;
+use Workup\NovaColorField\Color;
 
 public function fields(Request $request) {
     Color::make('Color'),
@@ -48,7 +48,7 @@ Available themes: `chrome, compact, grayscale, material, photoshop, sketch, slid
 See the theme demos [here](http://xiaokaike.github.io/vue-color/).
 
 ```php
-use Outl1ne\NovaColorField\Color;
+use Workup\NovaColorField\Color;
 
 public function fields(Request $request) {
     Color::make('Color')->photoshop(),

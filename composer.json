@@ -1,5 +1,5 @@
 {
-  "name": "outl1ne/nova-color-field",
+  "name": "workup/nova-color-field",
   "description": "A Laravel Nova Color Picker field.",
   "keywords": [
     "laravel",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "require": {
     "php": ">=8.0",
-    "laravel/nova": "^4.0",
+    "workup/nova": "^4.0",
     "ext-json": "*"
   },
   "require-dev": {
@@ -20,25 +20,19 @@
   },
   "autoload": {
     "psr-4": {
-      "Outl1ne\\NovaColorField\\": "src/"
+      "Workup\\NovaColorField\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Outl1ne\\NovaColorField\\ColorFieldServiceProvider"
+        "Workup\\NovaColorField\\ColorFieldServiceProvider"
       ]
     }
   },
   "config": {
     "sort-packages": true
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://nova.laravel.com"
-    }
-  ],
   "minimum-stability": "dev",
   "prefer-stable": true
 }
