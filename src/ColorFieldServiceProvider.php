@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\NovaColorField;
+namespace Workup\NovaColorField;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\NovaColorField;
+namespace Workup\NovaColorField;
 
 use Exception;
 use Laravel\Nova\Fields\Field;
@@ -87,13 +87,17 @@ class Color extends Field
 
     public function saveAs($saveAs = 'hex')
     {
-        if (!in_array($saveAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) throw new Exception("Invalid saveAs option provided [$saveAs].");
+        if (! in_array($saveAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) {
+            throw new Exception("Invalid saveAs option provided [$saveAs].");
+        }
         return $this->withMeta(['saveAs' => $saveAs]);
     }
 
     public function displayAs($displayAs = 'hex')
     {
-        if (!in_array($displayAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) throw new Exception("Invalid displayAs option provided [$displayAs].");
+        if (! in_array($displayAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) {
+            throw new Exception("Invalid displayAs option provided [$displayAs].");
+        }
         return $this->withMeta(['displayAs' => $displayAs]);
     }
 
@@ -103,7 +107,9 @@ class Color extends Field
             // Try to turn into array
             $value = $request[$requestAttribute];
             $arrayValue = json_decode($value, true);
-            if (!empty($arrayValue)) $value = $arrayValue;
+            if (! empty($arrayValue)) {
+                $value = $arrayValue;
+            }
 
             $model->{$attribute} = $this->isNullValue($value) ? null : $value;
         }

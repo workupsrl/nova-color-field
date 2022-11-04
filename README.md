@@ -1,14 +1,11 @@
 # Nova Color Field
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/optimistdigital/nova-color-field.svg?style=flat-square)](https://packagist.org/packages/optimistdigital/nova-color-field)
-[![Total Downloads](https://img.shields.io/packagist/dt/optimistdigital/nova-color-field.svg?style=flat-square)](https://packagist.org/packages/optimistdigital/nova-color-field)
-
 This [Laravel Nova](https://nova.laravel.com/) package adds a color picker to Nova's arsenal of fields.
 
 ## Requirements
 
 - `php: >=7.2`
-- `laravel/nova: ^3.0`
+- `workup/nova: ^3.0`
 
 ## Features
 
@@ -26,7 +23,7 @@ Forked from [timothyasp/nova-color-field](https://github.com/timothyasp/nova-col
 Install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require optimistdigital/nova-color-field
+composer require workup/nova-color-field
 ```
 
 ## Usage
@@ -34,7 +31,7 @@ composer require optimistdigital/nova-color-field
 ### General
 
 ```php
-use OptimistDigital\NovaColorField\Color;
+use Workup\NovaColorField\Color;
 
 public function fields(Request $request) {
     Color::make('Color'),
@@ -48,7 +45,7 @@ Available themes: `chrome, compact, grayscale, material, photoshop, sketch, slid
 See the theme demos [here](http://xiaokaike.github.io/vue-color/).
 
 ```php
-use OptimistDigital\NovaColorField\Color;
+use Workup\NovaColorField\Color;
 
 public function fields(Request $request) {
     Color::make('Color')->photoshop(),
