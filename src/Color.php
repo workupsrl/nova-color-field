@@ -48,7 +48,7 @@ class Color extends Field
         return $this->pickerType('twitter');
     }
 
-    public function compact()
+    public function compactTheme()
     {
         return $this->pickerType('compact');
     }
@@ -90,7 +90,7 @@ class Color extends Field
 
     public function saveAs($saveAs = 'hex')
     {
-        if (! in_array($saveAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) {
+        if (!in_array($saveAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) {
             throw new Exception("Invalid saveAs option provided [$saveAs].");
         }
         $saveAs = ($saveAs === "rgba") ? "rgb" : $saveAs;
@@ -99,7 +99,7 @@ class Color extends Field
 
     public function displayAs($displayAs = 'hex')
     {
-        if (! in_array($displayAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) {
+        if (!in_array($displayAs, ['rgb', 'rgba', 'hex', 'hex8', 'hsl'])) {
             throw new Exception("Invalid displayAs option provided [$displayAs].");
         }
         $displayAs = ($displayAs === "rgba") ? "rgb" : $displayAs;
@@ -112,7 +112,7 @@ class Color extends Field
             // Try to turn into array
             $value = $request[$requestAttribute];
             $arrayValue = json_decode($value, true);
-            if (! empty($arrayValue)) {
+            if (!empty($arrayValue)) {
                 $value = $arrayValue;
             }
 
