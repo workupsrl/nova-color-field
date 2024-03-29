@@ -8,9 +8,15 @@
     "field"
   ],
   "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    }
+  ],
   "require": {
     "php": ">=8.0",
-    "workup/nova": "^4.0",
+    "laravel/nova": "^4.0",
     "ext-json": "*"
   },
   "require-dev": {
